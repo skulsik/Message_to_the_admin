@@ -16,5 +16,45 @@
         </footer>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        $(document).ready(function(){
+            $('#SendMessage').click(function(e){
+                e.preventDefault();
+                $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                });
+
+                $.ajax({
+                    url: "{{ url('/api/create_message/') }}",
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        name: $('#name').val(),
+                        phone: $('#phone').val(),
+                        email: $('#email').val()
+                    },
+                    success: function(response) {
+                        if(response.result == 'error') {
+                            var content = '<div class="alert alert-danger">';
+                            console.log(response.result)
+
+                            $.each(response.errors, function (key, value) {
+                                console.log(value);
+                                content += ' - ' + value + '<br>';
+                            })
+                            document.getElementById("ErrorText").innerHTML = content + '</div>';
+                        }
+                        else document.getElementById("ErrorText").innerHTML = '<div class="alert alert-success">Сообщение успешно отправлено!</div>';
+                    }
+                });
+            });
+        });
+    }, false);
+</script>
+
 </body>
 </html>
