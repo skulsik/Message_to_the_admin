@@ -2,32 +2,31 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8 border border-dark rounded p-4">
-            <h3><i class="bi bi-card-text h3"></i><span class="ps-3">fghfdg</span></h3>
+            <h3><i class="bi bi-card-text h3"></i><span class="ps-3">Есть вопросы, тогда пишите нам!</span></h3>
             <hr>
-            <form method="POST" action="" class="form-control p-3">
-                @csrf
-                @if($errors->any())
-                    <div>
-                        @foreach($errors->all() as $error)
-                            <div class="alert alert-danger">{{ $error }}</div>
-                        @endforeach
-                    </div>
-                @endif
+            <div id="ErrorText"></div>
+            <form id="FormMessage" name="FormMessage" class="form-control p-3">
                 <div class="form-group row mb-3">
-                    <label for="title" class="col-sm-2 col-form-label">Описание</label>
+                    <label class="col-sm-2 col-form-label">Имя</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="title" name="title" placeholder="Описание" value="@if(!empty($text)){{ $text->title }}@endif">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Введите ваше имя">
                     </div>
                 </div>
                 <div class="form-group row mb-3">
-                    <label for="text" class="col-sm-2 col-form-label">Текст</label>
+                    <label class="col-sm-2 col-form-label">Телефон</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="text" name="text" placeholder="Введите сюда текст" rows="8">@if(!empty($text)){{ $text->text }}@endif</textarea>
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Введите номер телефона">
+                    </div>
+                </div>
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label">Электронная почта</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="email" name="email" placeholder="Введите почту">
                     </div>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" class="btn btn-warning">Сохранить</button>
+                        <button id="SendMessage" name="SendMessage" class="btn btn-warning">Отправить</button>
                     </div>
                 </div>
             </form>
