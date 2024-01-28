@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\Traits;
+namespace app\Services\Api\Traits;
 
 use App\Models\Role;
 
