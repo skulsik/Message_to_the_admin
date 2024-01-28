@@ -19,15 +19,11 @@
     <nav class="py-1 bg-body-tertiary border-bottom border-dark">
         <div class="container d-flex flex-wrap">
             <ul class="nav me-auto">
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2 active" aria-current="page"><ya-tr-span data-index="13-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Home" data-translation="Главная" data-ch="0" data-type="trSpan">Главная</ya-tr-span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="14-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Features" data-translation="Характеристики" data-ch="0" data-type="trSpan">Характеристики</ya-tr-span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="15-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Pricing" data-translation="Цены" data-ch="0" data-type="trSpan">Цены</ya-tr-span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="16-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="FAQs" data-translation="Вопросы и ответы" data-ch="0" data-type="trSpan">Вопросы и ответы</ya-tr-span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="17-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="About" data-translation="О нас" data-ch="0" data-type="trSpan">О нас</ya-tr-span></a></li>
+                <li class="nav-item"><a class="nav-link link-body-emphasis px-2 active" aria-current="page"><ya-tr-span data-index="13-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Home" data-translation="Главная" data-ch="0" data-type="trSpan">Админ панель -></ya-tr-span></a></li>
             </ul>
             <ul class="nav">
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="18-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Login" data-translation="Вход" data-ch="0" data-type="trSpan">Вход</ya-tr-span></a></li>
-                <li class="nav-item"><a href="#" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="19-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign up" data-translation="Регистрация" data-ch="0" data-type="trSpan" data-selected="false">Регистрация</ya-tr-span></a></li>
+                <li class="nav-item"><a href="{{ route('form_admin_email') }}" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="18-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Login" data-translation="Вход" data-ch="0" data-type="trSpan">Изменить почту</ya-tr-span></a></li>
+                <li class="nav-item"><a href="{{ route('list_messages') }}" class="nav-link link-body-emphasis px-2"><ya-tr-span data-index="19-0" data-translated="true" data-source-lang="en" data-target-lang="ru" data-value="Sign up" data-translation="Регистрация" data-ch="0" data-type="trSpan" data-selected="false">Список сообщений</ya-tr-span></a></li>
             </ul>
         </div>
     </nav>

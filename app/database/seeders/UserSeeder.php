@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         // Создает пользователя
         $user_root = new User();
         $user_root->name = 'Admin';
-        $user_root->email = 'vashenko.a.v@yandex.ru';
+        $user_root->email = 'admin@pochta.ru';
         $user_root->password = bcrypt('admin');
         $user_root->save();
 
